@@ -73,13 +73,10 @@ export default function CardEdit({ card, types, extensions, isCreate = false }: 
     update(card, formValue);
   }
 
-  function addNew(event: SyntheticEvent) {
-
-  }
 
   return (
     <div >
-      <form className="mt-1 form-group row ml-1" onSubmit={launchUpdate}>
+      <form className="mt-1 form-group row ml-1" action={`#${card.id}`} onSubmit={launchUpdate}>
         {/* <p>{card.id}</p> */}
         <textarea onChange={handleChange} className="form-control " name="name" value={name} rows={3} />
         <label htmlFor="difficulty" className="col-sm-5 col-form-label">Difficulty</label>

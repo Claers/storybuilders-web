@@ -1,9 +1,9 @@
 
-// import useFetchData from "./fetchData"
 import { FormEvent, SyntheticEvent } from "react";
 import CardImage from "./cardImage";
 import CardEdit from "./cardEdit";
 import AddCard from "./addCard";
+import DeleteCard from "./deleteCard";
 import useFetchData, { Card, CardType } from "./fetchDataStatic";
 
 type Data = {
@@ -21,7 +21,8 @@ export default async function CardsList() {
         <div className="row text-center">
           {cards?.map((card: Card) => {
             return (
-              <div key={`${card.id}`} className="col-6 col-sm-5 col-lg-4 text-center mb-5">
+              <div id={`${card.id}`} key={`${card.id}`} className="col-6 col-sm-5 col-lg-4 text-center mb-5">
+                <DeleteCard card_id={card.id} />
                 <CardEdit card={card} types={types} extensions={extensions} />
                 <div>
                   <CardImage id={card.id} face="0" endpoint="cards" name={card.name} key={`${card.name}_0`} />

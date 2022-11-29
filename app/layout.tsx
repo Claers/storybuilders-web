@@ -2,6 +2,7 @@ import Navbar from "./navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/bootstrap-dark.css";
 import "../styles/fontawesome-free-6.2.1-web/css/fontawesome.min.css";
+import "../styles/fontawesome-free-6.2.1-web/css/solid.min.css";
 
 export default function RootLayout({
   // Layouts must accept a children prop.
