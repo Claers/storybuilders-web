@@ -5,6 +5,7 @@ import CardEdit from "./cardEdit";
 import AddCard from "./addCard";
 import DeleteCard from "./deleteCard";
 import useFetchData, { Card, CardType } from "./fetchDataStatic";
+import PrintCards from "./printCard";
 
 type Data = {
   cards: Card[],
@@ -16,6 +17,7 @@ export default async function CardsList() {
 
   return (
     <div>
+      <PrintCards cards={cards} />
       <form action="/" id="new_card_form"></form>
       <div className="row">
         <div className="row text-center">
